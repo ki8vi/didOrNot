@@ -8,26 +8,31 @@
     <title>Did or not!?</title>
 </head>
 <body>
-    <header class="header">
-        <h1>Did or not</h1>
-        <h3>Твой менеджер задач на все случаи жизни</h3>
-    </header>
-    <main>
-        <div class="content">
-            <div class="task">
-                <div>Купить молоко</div>
-                <div>
-                    <button>Сделано</button>
-                    <button>Удалить</button>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Did or not</h1>
+            <h3>Твой менеджер задач на все случаи жизни</h3>
+        </header>
+        <main>
+            <div class="content">
+                <div class="task">
+                    <div>Купить молоко</div>
+                    <div>
+                        <button>Сделано</button>
+                        <button>Удалить</button>
+                    </div>
                 </div>
             </div>
+            <div class="new-task">
+                <h3>Добавьте новую задачу</h3>
+                <input type="text" placeholder="Текст задачи">
+                <button>Добавить</button>
+            </div>
+        </main>
+        <div class="delete-all">
+            <button>Удалить выполненные задачи</button>
         </div>
-        <div class="new-task">
-            <h3>Добавьте новую задачу</h3>
-            <input type="text" placeholder="Текст задачи">
-            <button>Добавить</button>
-        </div>
-    </main>
-    <footer></footer>
+        <footer></footer>
+    </div>
 </body>
 </html>
