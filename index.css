@@ -1,9 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Pacifico";
 }
 body {
     width: 600px;
     margin: 0 auto;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+.header {
+    margin-bottom: 25px;
+}
+.header h1 {
+    font-family: "Pacifico";
+    color: rgb(21, 9, 198);
+}
+.task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #d34fed22, #b4b9bc);
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.task button {
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.task button:hover {
+    background-color: rgba(180, 25, 223, 0.317);
+}
+.new-task {
+    background: linear-gradient(45deg, #d34fed22, #b4b9bc);
+    border: 1px solid rgb(244, 244, 244);
+    border-radius: 15px;
+    padding: 10px;
+}
+.new-task input {
+    width: 100%;
+}
+.new-task button {
+    padding: 3px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.new-task button:hover {
+    background-color: rgba(180, 25, 223, 0.317);
 }
