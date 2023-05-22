@@ -8,26 +8,40 @@
     <title>Did or not!?</title>
 </head>
 <body>
-    <header class="header">
-        <h1>Did or not</h1>
-        <h3>Твой менеджер задач на все случаи жизни</h3>
-    </header>
-    <main>
-        <div class="content">
-            <div class="task">
-                <div>Купить молоко</div>
-                <div>
-                    <button>Сделано</button>
-                    <button>Удалить</button>
-                </div>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Did or not!?</h1>
+            <h3>Твой менеджер задач на все случаи жизни</h3>
+        </header>
+        <main>
+            <div class="content">
+                
+                <!-- <div class="task">
+                    <div>Купить молоко</div>
+                    <div>
+                        <button>Сделано</button>
+                        <button>Удалить</button>
+                    </div>
+                </div> -->
             </div>
+            <form id="form" class="new-task">
+                <h3>Добавьте новую задачу</h3>
+                <input type="text" placeholder="Текст задачи" id="task-input">
+                <button>Добавить</button>
+            </form>
+        </main>
+        <div class="delete-all">
+            <button>Удалить выполненные задачи</button>
         </div>
-        <div class="new-task">
-            <h3>Добавьте новую задачу</h3>
-            <input type="text" placeholder="Текст задачи">
-            <button>Добавить</button>
+        <footer></footer>
+    </div>
+    <!-- <div class="author">
+        <span>Created by Vitaliy Kim</span>
+        <div class="links">
+            <a href="https://github.com/ki8vi"><br><img src="./img/Github_icon-icons.com_49946.png" alt="git-logo"></a>
+            <a href="https://www.linkedin.com/in/vitaliy-kim-b01508235/"><br><img src="./img/104639.png" alt="li-logo"></a>
         </div>
-    </main>
-    <footer></footer>
+    </div> -->
+    <script src="./index.js"></script>
 </body>
 </html>

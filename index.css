@@ -8,7 +8,15 @@
 body {
     width: 600px;
     margin: 0 auto;
-    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    background: linear-gradient(265deg, #e76852, #7925cd);
+}
+.wrapper {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    background: linear-gradient(265deg, #d49adbf7, #f5f5f3);
+    box-shadow: 8px 10px 5px 5px rgba(15, 13, 1, 0.217)
 }
 .header {
     margin-bottom: 25px;
@@ -21,11 +29,11 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(45deg, #d34fed22, #b4b9bc);
+    background: linear-gradient(265deg, #fbd9d9f7, #33d0ec77);
     border: 1px solid rgb(238, 238, 238);
     border-radius: 15px;
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 .task button {
     padding: 3px;
@@ -34,12 +42,14 @@ body {
 }
 .task button:hover {
     background-color: rgba(180, 25, 223, 0.317);
+    
 }
 .new-task {
-    background: linear-gradient(45deg, #d34fed22, #b4b9bc);
+    background: linear-gradient(265deg, #fbd9d9, #33d0ec77);
     border: 1px solid rgb(244, 244, 244);
     border-radius: 15px;
     padding: 10px;
+    margin-top: 25px;
 }
 .new-task input {
     width: 100%;
@@ -52,4 +62,28 @@ body {
 }
 .new-task button:hover {
     background-color: rgba(180, 25, 223, 0.317);
+    /* box-shadow: 0px 0px 1px 1px rgba(239, 11, 11, 0.769) */
+}
+.delete-all {
+    display: flex;
+    justify-content: end;
+}
+.delete-all button {
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.delete-all button:hover {
+    background-color: rgba(180, 25, 223, 0.317);
+}
+.author {
+    bottom: 0;
+    position: absolute;
+}
+.author img {
+    width: 40px;
+}
+.links {
+    display: flex;
 }
