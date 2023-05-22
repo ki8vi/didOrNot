@@ -21,5 +21,4 @@ form.addEventListener("submit", function(e) {
     input.value = "";
     input.focus()
    
-
 }) 
