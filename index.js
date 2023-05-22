@@ -7,7 +7,6 @@ const taskList = document.querySelector(".content");
 form.addEventListener("submit", function(e) {
     e.preventDefault()
     const taskText = input.value;
-
     const taskHTML = `<div class="task">
                         <div>${taskText}</div>
                         <div>
