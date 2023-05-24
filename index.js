@@ -4,12 +4,15 @@ const input = document.querySelector("#task-input");
 const taskList = document.querySelector(".content");
 
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault()
+form.addEventListener("submit", addTask);
+
+function addTask(e) {
+    e.preventDefault();
+    
     const taskText = input.value;
     const taskHTML = `<div class="task">
-                        <div>${taskText}</div>
-                        <div>
+                        <div class="task-text">${taskText}</div>
+                        <div class="buttons">
                             <button>Сделано</button>
                             <button>Удалить</button>
                         </div>
@@ -18,5 +21,6 @@ form.addEventListener("submit", function(e) {
     taskList.insertAdjacentHTML("beforeend", taskHTML)
 
     input.value = "";
-    input.focus()
-}) 
+    input.focus();
+
+};

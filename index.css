@@ -18,6 +18,10 @@ body {
     background: linear-gradient(265deg, #d49adbf7, #f5f5f3);
     box-shadow: 8px 10px 5px 5px rgba(15, 13, 1, 0.217)
 }
+/* .content {
+    position: relative;
+    word-wrap: break-word;
+} */
 .header {
     margin-bottom: 25px;
 }
@@ -32,8 +36,21 @@ body {
     background: linear-gradient(265deg, #fbd9d9f7, #33d0ec77);
     border: 1px solid rgb(238, 238, 238);
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 5px;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+.task-text {
+    overflow-x: hidden;
+    width: 77%;
+}
+.buttons {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 5px;
 }
 .task button {
     padding: 3px;
@@ -53,6 +70,7 @@ body {
 }
 .new-task input {
     width: 100%;
+    padding-left: 5px;
 }
 .new-task button {
     padding: 3px;
