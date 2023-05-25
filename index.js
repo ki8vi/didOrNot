@@ -6,20 +6,9 @@ let tasks = [];
 
 if(localStorage.getItem("tasks")) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
+    tasks.map(el => renderTask(el));
 }
-    tasks.forEach(el => {
-    const cssClass = el.done ? "task task-done" : "task"
-    
-    const taskHTML = `<div id="${el.id}"class="${cssClass}">
-                        <div class="task-text">${el.text}</div>
-                        <div class="buttons">
-                            <button data-action="done">Сделано</button>
-                            <button data-action="delete">Удалить</button>
-                        </div>
-                    </div>`
-    
-    taskList.insertAdjacentHTML("beforeend", taskHTML)
-});
+
 
 form.addEventListener("submit", addTask);
 
@@ -35,19 +24,7 @@ function addTask(e) {
     tasks.push(newTask);
     saveToLocalStrg();
 
-    const cssClass = newTask.done ? "task-done" : "task"
-    
-    const taskHTML = `<div id="${newTask.id}"class="${cssClass}">
-                        <div class="task-text">${newTask.text}</div>
-                        <div class="buttons">
-                            <button data-action="done">Сделано</button>
-                            <button data-action="delete">Удалить</button>
-                        </div>
-                    </div>`
-    // if(!taskText) {
-    //     return;
-    // }
-    taskList.insertAdjacentHTML("beforeend", taskHTML)
+    renderTask(newTask);
 
     input.value = "";
     input.focus();
@@ -81,3 +58,16 @@ function saveToLocalStrg() {
     localStorage.setItem("tasks", JSON.stringify(tasks))
 }
 
+function renderTask(el) {
+    const cssClass = el.done ? "task task-done" : "task"
+    
+    const taskHTML = `<div id="${el.id}"class="${cssClass}">
+                        <div class="task-text">${el.text}</div>
+                        <div class="buttons">
+                            <button data-action="done">Сделано</button>
+                            <button data-action="delete">Удалить</button>
+                        </div>
+                    </div>`
+    
+    taskList.insertAdjacentHTML("beforeend", taskHTML)
+}
