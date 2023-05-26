@@ -4,9 +4,17 @@ const input = document.querySelector("#task-input");
 const taskList = document.querySelector(".content");
 let tasks = [];
 
+// const delComplete = document.querySelector("#delCom");
+// delComplete.addEventListener("click", removeCompleted);
+// function removeCompleted() {
+//     tasks = tasks.filter(t => t.done !== true)
+//     saveToLocalStrg()
+// }
+
+
 if(localStorage.getItem("tasks")) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
-    tasks.map(el => renderTask(el));
+    tasks.forEach(el => renderTask(el));
 }
 
 
@@ -23,12 +31,9 @@ function addTask(e) {
     };
     tasks.push(newTask);
     saveToLocalStrg();
-
     renderTask(newTask);
-
     input.value = "";
     input.focus();
-
 };
 
 taskList.addEventListener("click", deleteTask);
@@ -42,6 +47,7 @@ function deleteTask(event){
     const index = tasks.findIndex(t => t.id === id) 
     tasks.splice(index, 1)
     parent.remove()
+    
     saveToLocalStrg();
 }
 function doneTask(event) {
@@ -58,16 +64,20 @@ function saveToLocalStrg() {
     localStorage.setItem("tasks", JSON.stringify(tasks))
 }
 
-function renderTask(el) {
-    const cssClass = el.done ? "task task-done" : "task"
+
+function renderTask(tasks) {
+    const cssClass = tasks.done ? "task task-done" : "task";
     
-    const taskHTML = `<div id="${el.id}"class="${cssClass}">
-                        <div class="task-text">${el.text}</div>
+    const taskHTML = `<div id="${tasks.id}"class="${cssClass}">
+                        <div class="task-text">${tasks.text}</div>
                         <div class="buttons">
                             <button data-action="done">Сделано</button>
                             <button data-action="delete">Удалить</button>
                         </div>
                     </div>`
     
-    taskList.insertAdjacentHTML("beforeend", taskHTML)
+    taskList.insertAdjacentHTML("beforeend", taskHTML);
 }
+
+
+

@@ -67,6 +67,7 @@ body {
     border-radius: 15px;
     padding: 10px;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 .new-task input {
     width: 100%;
@@ -89,6 +90,7 @@ body {
 .delete-all {
     display: flex;
     justify-content: end;
+    display: none
 }
 .delete-all button {
     border-radius: 5px;
